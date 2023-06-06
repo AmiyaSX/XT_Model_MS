@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from xt.model.ms_compat import ms, SequentialCell, Dense, Conv2d, Flatten,\
+from ms_compat import ms, SequentialCell, Dense, Conv2d, Flatten,\
                                 get_activation, Cell
 from mindspore._checkparam import twice
 

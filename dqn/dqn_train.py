@@ -1,6 +1,4 @@
-import xt
-from xt.main import main
-from xt.train import train
+
 from zeus.common.util.register import Registers
 
 from dqn_cnn_ms import DqnCnnMS
@@ -12,4 +10,3 @@ Registers.model(XTModel_MS)
 Registers.model(DqnCnnMS)
 Registers.model(DqnMlpMS)
 Registers.model(DqnCnnPongMS)
-train()

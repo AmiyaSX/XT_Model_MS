@@ -27,19 +27,17 @@ import numpy as np
 from collections import OrderedDict
 from typing import List
 from mindspore import nn, ops, ParameterTuple
-from xt.model.ms_compat import ms, Tensor, Adam, Cell, TrainOneStepCell, FixedLossScaleUpdateCell
-from xt.model.model_ms import XTModel_MS, check_keep_model
-from xt.model.muzero.default_config import LR, td_step
-from xt.model.muzero.muzero_utils_ms import value_compression_ms,\
+from ..ms_compat import ms, Tensor, Adam, Cell, TrainOneStepCell, FixedLossScaleUpdateCell
+from ..model_ms import XTModel_MS, check_keep_model
+from default_config import LR, td_step
+from muzero_utils_ms import value_compression_ms,\
     value_decompression_ms, cross_entropy_ms, scale_gradient_ms
 from zeus.common.util.common import import_config
 from xt.model.pb_format import pb_model
-from zeus.common.util.register import Registers
 from mindspore import set_context
 from xt.model.dqn.dqn_cnn_ms import MyTrainOneStepCell
-set_context(runtime_num_threads=3)
 
-# pyli
+set_context(runtime_num_threads=3)
 class MuzeroModelMS(XTModel_MS):
     """Docstring for ActorNetwork."""
 

@@ -1,6 +1,6 @@
 """Action distribution with mindspore"""
 import numpy as np
-from xt.model.ms_compat import ms, Cast, ReduceSum, ReduceMax, Tensor
+from ms_compat import ms, Cast, ReduceSum, ReduceMax, Tensor
 from mindspore import ops
 from mindspore import ms_class
 

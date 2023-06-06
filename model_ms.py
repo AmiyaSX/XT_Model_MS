@@ -25,7 +25,6 @@ import mindspore as ms
 from xt.model.model import XTModel
 
 
-
 class XTModel_MS(XTModel):
 
     def __init__(self, model_info):

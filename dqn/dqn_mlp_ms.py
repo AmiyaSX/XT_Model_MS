@@ -22,10 +22,8 @@ from ..model_ms import XTModel_MS
 from zeus.common.util.common import import_config
 from zeus.common.util.register import Registers
 from ..ms_compat import Dense, Adam, DynamicLossScaleUpdateCell, MSELoss, Cell, Model, ms
-import mindspore.ops as ops
 from ..ms_utils import MSVariables
 from dqn_cnn_ms import MyTrainOneStepCell
-
 
 @Registers.model
 class DqnMlpMS(XTModel_MS):
