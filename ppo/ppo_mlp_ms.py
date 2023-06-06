@@ -18,15 +18,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-from xt.model.model_utils_ms import ACTIVATION_MAP_MS,\
+from ..model_utils_ms import ACTIVATION_MAP_MS,\
     get_mlp_backbone_ms, get_mlp_default_settings_ms
-from xt.model.ppo.default_config import MLP_SHARE_LAYERS
-from xt.model.ppo.ppo_ms import PPOMS
+from default_config import MLP_SHARE_LAYERS
+from ppo_ms import PPOMS
 from zeus.common.util.register import Registers
-from xt.model.ms_utils import MSVariables
+from ..ms_utils import MSVariables
 
 
-@Registers.model
 class PpoMlpMS(PPOMS):
     """Build PPO MLP network."""
 

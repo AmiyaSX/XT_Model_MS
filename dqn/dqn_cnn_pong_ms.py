@@ -18,14 +18,13 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 from xt.model.dqn.default_config import LR
-from xt.model.dqn.dqn_cnn_ms import DqnCnnMS
-from xt.model.ms_utils import MSVariables
-from xt.model.ms_compat import ms, Adam, MSELoss, WithLossCell, DynamicLossScaleUpdateCell, Tensor
+from dqn_cnn_ms import DqnCnnMS
+from ..ms_utils import MSVariables
+from ..ms_compat import ms, Adam, MSELoss, WithLossCell, DynamicLossScaleUpdateCell, Tensor
 from zeus.common.util.register import Registers
-from xt.model.dqn.dqn_cnn_ms import MyTrainOneStepCell
+from dqn_cnn_ms import MyTrainOneStepCell
 
 
-@Registers.model
 class DqnCnnPongMS(DqnCnnMS):
     """Docstring for DqnPong."""
 

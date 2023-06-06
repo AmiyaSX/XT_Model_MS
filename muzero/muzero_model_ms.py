@@ -39,9 +39,7 @@ from mindspore import set_context
 from xt.model.dqn.dqn_cnn_ms import MyTrainOneStepCell
 set_context(runtime_num_threads=3)
 
-# pylint: disable=W0201
-
-@Registers.model
+# pyli
 class MuzeroModelMS(XTModel_MS):
     """Docstring for ActorNetwork."""
 

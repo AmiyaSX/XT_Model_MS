@@ -18,15 +18,14 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-from xt.model.model_utils_ms import ACTIVATION_MAP_MS, get_cnn_backbone_ms,\
+from ..model_utils_ms import ACTIVATION_MAP_MS, get_cnn_backbone_ms,\
     get_cnn_default_settings_ms, get_default_filters_ms
-from xt.model.ppo.default_config import CNN_SHARE_LAYERS
-from xt.model.ppo.ppo_ms import PPOMS
+from default_config import CNN_SHARE_LAYERS
+from ..ppo.ppo_ms import PPOMS
 from zeus.common.util.register import Registers
-from xt.model.ms_utils import MSVariables
+from ..ms_utils import MSVariables
 
 
-@Registers.model
 class PpoCnnMS(PPOMS):
     """Build PPO CNN network."""
 

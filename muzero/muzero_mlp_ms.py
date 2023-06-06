@@ -1,14 +1,12 @@
 from mindspore import nn
 from mindspore.nn import Dense
-from xt.model.muzero.muzero_model_ms import MuzeroModelMS
-from xt.model.muzero.default_config import HIDDEN1_UNITS, HIDDEN2_UNITS
+from muzero_model_ms import MuzeroModelMS
+from default_config import HIDDEN1_UNITS, HIDDEN2_UNITS
 from zeus.common.util.common import import_config
 from zeus.common.util.register import Registers
 
 # pylint: disable=W0201
 
-
-@Registers.model
 class MuzeroMlpMS(MuzeroModelMS):
     """Docstring for ActorNetwork."""
 

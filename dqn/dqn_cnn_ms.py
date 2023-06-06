@@ -19,17 +19,16 @@
 # THE SOFTWARE.
 
 from zeus.common.util.register import Registers
-from xt.model.model_ms import XTModel_MS
-from xt.model.ms_utils import MSVariables
-from xt.model.dqn.default_config import LR
-from xt.model.ms_compat import ms
-from xt.model.ms_compat import Conv2d, Dense, Flatten, ReLU, Adam, MSELoss, WithLossCell, MultitypeFuncGraph, \
+from ..model_ms import XTModel_MS
+from ..ms_utils import MSVariables
+from default_config import LR
+from ..ms_compat import ms
+from ..ms_compat import Conv2d, Dense, Flatten, ReLU, Adam, MSELoss, WithLossCell, MultitypeFuncGraph, \
     DynamicLossScaleUpdateCell, Cast, Cell, Tensor
 from zeus.common.util.common import import_config
 import mindspore.ops as ops
 import numpy as np
 
-@Registers.model
 class DqnCnnMS(XTModel_MS):
     """Docstring for DqnCnn."""
 

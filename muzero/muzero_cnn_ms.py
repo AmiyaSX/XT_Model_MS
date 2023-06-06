@@ -1,13 +1,12 @@
-from xt.model.ms_compat import ms, Dense, Conv2d, Flatten, ReLU, Cell
-from xt.model.muzero.muzero_model_ms import MuzeroModelMS
-from xt.model.muzero.default_config import HIDDEN_OUT
+from ..ms_compat import ms, Dense, Conv2d, Flatten, ReLU, Cell
+from muzero_model_ms import MuzeroModelMS
+from default_config import HIDDEN_OUT
 from zeus.common.util.common import import_config
 from zeus.common.util.register import Registers
 
 # pylint: disable=W0201
 
 
-@Registers.model
 class MuzeroCnnMS(MuzeroModelMS):
     """Docstring for ActorNetwork."""
 

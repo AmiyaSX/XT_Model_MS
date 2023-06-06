@@ -17,14 +17,14 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-from xt.model.dqn.default_config import HIDDEN_SIZE, NUM_LAYERS, LR
-from xt.model.model_ms import XTModel_MS
+from default_config import HIDDEN_SIZE, NUM_LAYERS, LR
+from ..model_ms import XTModel_MS
 from zeus.common.util.common import import_config
 from zeus.common.util.register import Registers
-from xt.model.ms_compat import Dense, Adam, DynamicLossScaleUpdateCell, MSELoss, Cell, Model, ms
+from ..ms_compat import Dense, Adam, DynamicLossScaleUpdateCell, MSELoss, Cell, Model, ms
 import mindspore.ops as ops
-from xt.model.ms_utils import MSVariables
-from xt.model.dqn.dqn_cnn_ms import MyTrainOneStepCell
+from ..ms_utils import MSVariables
+from dqn_cnn_ms import MyTrainOneStepCell
 
 
 @Registers.model
